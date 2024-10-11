@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">My Online Store</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button id="searchButton">Search</button>
+</div>
+
+<main>
+    <h1>Featured Products</h1>
+    <div class="product-list">
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product 4">
+            <h2>Product 4</h2>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="cart-message" id="cartMessage">Item added to cart!</div>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Online Store. All rights reserved.</p>
+</footer>
+
+<script>
+    // Add to Cart functionality
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartMessage = document.getElementById('cartMessage');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cartMessage.style.display = 'block';
+            setTimeout(() => {
+                cartMessage.style.display = 'none';
+            }, 2000); // Hide message after 2 seconds
+        });
+    });
+
+    // Search functionality
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        alert(`Searching for: ${searchTerm}`);
+    });
+</script>
+
+</body>
+</html>

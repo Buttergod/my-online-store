@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">My Online Store</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button id="searchButton">Search</button>
+</div>
+
+<main>
+    <h1>Welcome to My Online Store</h1>
+    <p>Explore our featured products!</p>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Online Store. All rights reserved.</p>
+</footer>
+
+<script>
+    // Search functionality
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        alert(`Searching for: ${searchTerm}`);
+    });
+</script>
+
+</body>
+</html>
